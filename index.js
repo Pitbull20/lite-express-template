@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import sequelize from './config/database.js';
 import authRoutes from './routes/authRoutes.js';
-
-dotenv.config();
+import path from 'path';
+dotenv.config({ path: path.resolve('config', '.env') });
 
 const app = express();
 
